@@ -54,7 +54,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Hours */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
@@ -75,7 +75,7 @@ const Footer = () => {
                 <span>5:00 PM - 9:00 PM</span>
               </li>
             </ul>
-          </motion.div>
+          </motion.div> */}
 
           {/* Contact */}
           <motion.div

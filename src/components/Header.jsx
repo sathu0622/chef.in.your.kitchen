@@ -79,14 +79,14 @@ const Header = () => {
             className="md:hidden bg-[#14213d] shadow-xl"
           >
             <div className="container mx-auto px-4 py-2">
-              <div className="flex items-center mb-4 px-2 py-3 bg-[#1d3557]/50 rounded-lg">
-                <FiSearch className="text-gray-400 mr-2" />
-                <input 
+              {/* <div className="flex items-center mb-4 px-2 py-3 bg-[#1d3557]/50 rounded-lg"> */}
+                {/* <FiSearch className="text-gray-400 mr-2" /> */}
+                {/* <input 
                   type="text" 
                   placeholder="Search..." 
                   className="bg-transparent border-none outline-none text-white placeholder-gray-400 w-full"
-                />
-              </div>
+                /> */}
+              {/* </div> */}
               <ul className="flex flex-col space-y-2">
                 {navLinks.map(({ to, label }) => (
                   <NavLink

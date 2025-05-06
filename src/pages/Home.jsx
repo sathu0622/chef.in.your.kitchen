@@ -1,6 +1,7 @@
 import HeroImage from '../assets/images/Hero1.jpg';
 import { motion } from 'framer-motion';
 import { FaStar, FaUtensils, FaLeaf, FaWineGlassAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -15,8 +16,34 @@ const Home = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/30 z-0"></div>
         </div>
-        
         <motion.div 
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="relative z-10 text-center px-4 sm:px-6 lg:px-8"
+>
+  <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-white mb-4 sm:mb-6 drop-shadow-lg tracking-tight">
+    chef.in.your.kitchen
+  </h1>
+
+  <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white mb-6 sm:mb-8 max-w-2xl sm:max-w-3xl mx-auto drop-shadow-sm leading-relaxed">
+    Where culinary artistry meets warm hospitality in an unforgettable dining experience
+  </p>
+
+  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+    <motion.button 
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="bg-[#e63946] hover:bg-red-700 text-white font-semibold py-2.5 sm:py-3 px-6 sm:px-8 rounded-full shadow-lg transition-all duration-300 w-full sm:w-auto"
+    >
+      <Link to="/menu" className="w-full h-full block">
+    View Menu
+  </Link>
+    </motion.button>
+  </div>
+</motion.div>
+
+        {/* <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -44,7 +71,7 @@ const Home = () => {
               <a href='/menu'>View Menu</a>
             </motion.button>
           </div>
-        </motion.div>
+        </motion.div> */}
         
         <div className="absolute bottom-8 left-0 right-0 flex justify-center z-10">
           <motion.div
@@ -105,19 +132,23 @@ const Home = () => {
                 <motion.a
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  href="/about"
+                  // href="/about"
                   className="bg-[#e63946] hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-full shadow-md transition-all duration-300 text-center"
                 >
-                  Our Story
+                    
+              <Link to="/about" className="w-full h-full block">
+              Our Story
+                           
+  </Link>
                 </motion.a>
-                <motion.a
+                {/* <motion.a
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   href="/team"
                   className="bg-transparent border-2 border-[#1d3557] hover:bg-[#1d3557]/10 text-[#1d3557] font-semibold py-3 px-6 rounded-full shadow-md transition-all duration-300 text-center"
                 >
                   Meet the Team
-                </motion.a>
+                </motion.a> */}
               </div>
             </motion.div>
             
@@ -167,20 +198,20 @@ const Home = () => {
                 name: "Truffle Pasta",
                 description: "Handmade pasta with black truffle cream sauce and wild mushrooms",
                 price: "$24",
-                image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                //image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
                 featured: true
               },
               {
                 name: "Grilled Salmon",
                 description: "Fresh Atlantic salmon with lemon butter sauce and seasonal vegetables",
                 price: "$28",
-                image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                //image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
               },
               {
                 name: "Chocolate Soufflé",
                 description: "Warm chocolate soufflé with vanilla bean ice cream and raspberry coulis",
                 price: "$12",
-                image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+               // image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
                 featured: true
               }
             ].map((item, index) => (
@@ -193,12 +224,12 @@ const Home = () => {
                 whileHover={{ y: -10 }}
                 className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${item.featured ? 'border-t-4 border-[#e63946]' : ''}`}
               >
-                <div className="relative overflow-hidden h-64">
-                  <img
+                <div className="relative overflow-hidden h-15">
+                  {/* <img
                     src={item.image}
                     alt={item.name}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
+                  /> */}
                   {item.featured && (
                     <div className="absolute top-4 right-4 bg-[#e63946] text-white px-3 py-1 rounded-full text-sm font-bold">
                       Chef's Special
@@ -229,10 +260,13 @@ const Home = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/menu"
+              // href="/menu"
               className="inline-block bg-[#1d3557] hover:bg-[#14213d] text-white font-semibold py-3 px-10 rounded-full shadow-lg transition-all duration-300"
             >
+              
+              <Link to="/menu" className="w-full h-full block">
               Explore Full Menu
+  </Link>
             </motion.a>
           </motion.div>
         </div>
@@ -322,19 +356,19 @@ const Home = () => {
               Book your table today and let us take you on a culinary journey you won't forget
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.a
+              {/* <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="/reservations"
                 className="bg-[#e63946] hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 inline-block"
               >
                 Reserve Now
-              </motion.a>
+              </motion.a> */}
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="tel:+1234567890"
-                className="bg-transparent border-2 border-white hover:bg-white/10 font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 inline-block"
+                className="bg-[#e63946] hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300 inline-block"
               >
                 Call: (123) 456-7890
               </motion.a>

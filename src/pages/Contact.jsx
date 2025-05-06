@@ -64,12 +64,12 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="bg-[#e63946] p-3 rounded-full mr-4 flex-shrink-0">
+                  {/* <div className="bg-[#e63946] p-3 rounded-full mr-4 flex-shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                  </div>
-                  <div>
+                  </div> */}
+                  {/* <div>
                     <h3 className="font-serif font-bold text-xl text-[#1d3557] mb-2">Hours</h3>
                     <ul className="text-gray-600 space-y-2">
                       <li className="flex justify-between">
@@ -85,7 +85,7 @@ const Contact = () => {
                         <span>5:00 PM - 9:00 PM</span>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
