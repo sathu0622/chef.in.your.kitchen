@@ -1,4 +1,4 @@
-import HeroImage from '../assets/images/hero1.jpg';
+import HeroImage from '../assets/images/Hero1.jpg';
 import { motion } from 'framer-motion';
 import { FaStar, FaUtensils, FaLeaf, FaWineGlassAlt } from 'react-icons/fa';
 
